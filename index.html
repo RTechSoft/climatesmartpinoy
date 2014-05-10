@@ -1,7 +1,7 @@
 <!DOCTYPE html><!--HTML5 doctype-->
 <html>
 <head>
-	<title>Climate Smart Pinoy</title>
+	<title>Resilient Pinoy</title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
 	<style type="text/css">
@@ -20,8 +20,125 @@
 		};
 		document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
 	</script>
+<link href="bootstrap.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+        
 </head>
-<body>
-	tzar pogi
+<body style="background:#2E2E2E;">
+<div class="page-container">
+  
+	<!-- top navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    	<div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <a class="navbar-brand" href="#">Resilient Pinoy</a>
+    	</div>
+    </div>
+      
+    <div class="col-sm-12">
+      <div class="row row-offcanvas row-offcanvas-right">
+        
+        <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation" style="position:fixed;right:0; margin-top:50px; background:#2E2E2E;">
+          <div data-spy="affix" data-offset-top="40" data-offset-bottom="90" >
+            <ul class="nav" id="sidebar-nav">
+              <li><a href="#">Alert</a></li>
+              <li><a href="#section1">News</a></li>
+              <li><a href="#section2">Crisis Map</a></li>
+              <li><a href="#section3">Report</a></li>
+            </ul>
+           </div>
+        </div>
+  	
+        <!-- main area -->
+        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav" style="background:#2E2E2E;">
+          
+          <div class="row">
+           <div class="col-sm-6">
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h4>Alerts</h4></div>
+                    <div class="panel-body" style="height:400px">
+                      Alert Here
+                    </div>
+                </div>
+                  
+            </div>
+            </div><!--/row-->
+          
+          
+          <h1 id="section1">News</h1>
+  
+          <div class="panel panel-default">
+          <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>News</h4></div>
+   			<div class="panel-body" style="height:400px;">
+              <div class="list-group">
+                  Announcement Module Here
+              </div>
+            </div>
+   		</div>
+
+          <h1 id="section2">Section 2</h1>
+         <div class="panel panel-default">
+          <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Crisis Map</h4></div>
+   			<div class="panel-body" style="height:400px;">
+              <div class="list-group">
+                  Announcement Module Here
+              </div>
+            </div>
+        </div>
+          
+    
+          <h1 id="section3">Report</h1>           
+            <div class="well"> 
+                     <form class="form-horizontal" role="form">
+                      <h4>Report</h4>
+                       <div class="form-group" style="padding:14px;">
+                        <textarea class="form-control" placeholder="Update your status"></textarea>
+                      </div>
+                      
+                       <button class="btn btn-success pull-right" type="button">Post</button><ul class="list-inline"><li><a href="#"><i class="glyphicon glyphicon-align-left"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-center"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-right"></i></a></li></ul>
+                    </form>
+                </div>
+  
+          </div><!--/.row-->
+  </div><!--/.container-->
+</div><!--/.page-container-->
+</div>
+
+
+
+        
+        <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+        <script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+        
+        <!-- JavaScript jQuery code from Bootply.com editor -->
+        
+        <script type='text/javascript'>
+        
+        $(document).ready(function() {
+        
+              $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+  });
+  
+  $('.btn-toggle').click(function() {
+    $(this).find('.btn').toggleClass('active').toggleClass('btn-default').toggleClass('btn-primary');
+  });
+
+        
+        });
+        
+        </script>	
 </body>
 </html>
