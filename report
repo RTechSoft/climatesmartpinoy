@@ -1,0 +1,85 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: timi
+ * Date: 5/11/14
+ * Time: 3:49 AM
+ */
+
+if(isset($_POST['location']) )
+    // mysql hostname
+ $hostname = 'localhost';
+
+// mysql database
+ $database = 'thecodes_alert';
+
+// mysql username
+ $username = 'thecodes_alert';
+
+// mysql password
+ $password = 'qwerty12345';
+
+ $id='';
+
+    mysql_connect($hostname, $username, $password);
+    mysql_select_db( $database);
+
+    $id = MD5(date("Y-m-d h:i:s").$_GET['name'].$_GET['subject'].$_GET['location']);
+
+    include_once("trinly01_APIs/trinly01_Upload_File.php");
+
+    /*if(isset($_FILES['pic']['name']) && $_FILES['pic']['name'] != "")
+    {
+
+        $target_path = "images/";
+        
+        $ext = "png";
+        $allowed_exts_array = array("jpg", "jpeg", "gif", "png", "JPG", "JPEG", "GIF", "PNG");
+        $max_size = 5242880;
+
+        //$upload=trinly01_file_uploader('pic', $target_path, $id, $ext, $allowed_exts_array, $max_size);
+
+        if(!($upload))
+        {
+            echo "error";
+        }
+
+        $sql = "
+            INSERT INTO tbl_reports SET
+            id = '".$id."',
+            location = '".mysql_real_escape_string($_GET['location'])."',
+            name = '".mysql_real_escape_string($_GET['name'])."',
+            subject = '".mysql_real_escape_string($_GET['subject'])."',
+            message = '".mysql_real_escape_string($_GET['message'])."',
+            pic = '".$id.".png'
+        ";
+        mysql_query($sql);
+    }*/
+    if(isset($_POST['location']))
+    {
+
+        $sql = "
+            INSERT INTO tbl_report SET
+            id = '".$id."',
+            location = '".mysql_real_escape_string($_POST['location'])."',
+            name = '".mysql_real_escape_string($_POST['name'])."',
+            subject = '".mysql_real_escape_string($_POST['subject'])."',
+            message = '".mysql_real_escape_string($_POST['message'])."',
+            datetimee = '".date("Y-m-d h:i:s")."'
+        ";
+        mysql_query($sql) or die(mysql_error());
+	echo "Sent!";
+    }
+    //echo isset($_POST['location']);
+
+    /*
+    $sql = "
+            SELECT * FROM tbl_report
+        ";
+        $result=mysql_query($sql);
+	while($row=mysql_fetch_array($result))
+{
+	echo "hello</br>";
+}*/
+
+?>
