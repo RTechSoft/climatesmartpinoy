@@ -1,3 +1,15 @@
+<!---
+Resilient Pinoy
+
+By Team Pogi
+
+Trinmar - Mister Pogi
+Michael - Master Gwapo
+Tzar - Sobrang Pogi
+Pauline Mae "Dyosa Ganda" Revilla
+
+--->
+
 <!DOCTYPE html><!--HTML5 doctype-->
 <html>
 <head>
@@ -16,129 +28,204 @@
 		var onDeviceReady=function(){
 		//hide splash screen
 		intel.xdk.device.hideSplashScreen();
-        intel.xdk.device.setRotateOrientation(portrait);
 		};
 		document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
 	</script>
-<link href="bootstrap.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-        
+    <!-- bootstrap 3.0.2 -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons -->
+        <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Morris chart -->
+        <link href="css/morris/morris.css" rel="stylesheet" type="text/css" />
+        <!-- jvectormap -->
+        <link href="css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+        <!-- fullCalendar -->
+        <link href="css/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
+        <!-- Daterange picker -->
+        <link href="css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+        <!-- bootstrap wysihtml5 - text editor -->
+        <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
+        <!-- Theme style -->
+        <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
 </head>
-<body style="background:#2E2E2E;">
-<div class="page-container">
-  
-	<!-- top navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    	<div class="navbar-header">
-           <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-           </button>
-           <a class="navbar-brand" href="#">Resilient Pinoy</a>
-    	</div>
-    </div>
-      
-    <div class="col-sm-12">
-      <div class="row row-offcanvas row-offcanvas-right">
-        
-        <!-- sidebar -->
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation" style="position:fixed;right:0; margin-top:50px; background:#2E2E2E;">
-          <div data-spy="affix" data-offset-top="40" data-offset-bottom="90" >
-            <ul class="nav" id="sidebar-nav">
-              <li><a href="#">Alert</a></li>
-              <li><a href="#section1">News</a></li>
-              <li><a href="#section2">Crisis Map</a></li>
-              <li><a href="#section3">Report</a></li>
-            </ul>
-           </div>
-        </div>
-  	
-        <!-- main area -->
-        <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav" style="background:#2E2E2E;">
-          
-          <div class="row">
-           <div class="col-sm-6">
-                <div class="panel panel-default">
-                  <div class="panel-heading"><h4>Alerts</h4></div>
-                    <div class="panel-body" style="height:400px">
-                      Alert Here
-                    </div>
+<body class="skin-blue">
+        <!-- header logo: style can be found in header.less -->
+        <header class="header">
+            
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <!-- Notifications: style can be found in dropdown.less -->
+                        <!-- Tasks: style can be found in dropdown.less -->
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <a href="index.html" class="logo">
+                            Resilient Pinoy
+                        </a>
+                    </ul>
                 </div>
-                  
-            </div>
-            </div><!--/row-->
-          
-          
-          <h1 id="section1">News</h1>
-  
-          <div class="panel panel-default">
-          <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>News</h4></div>
-   			<div class="panel-body" style="height:400px;">
-              <div class="list-group">
-                  Announcement Module Here
-              </div>
-            </div>
-   		</div>
+            </nav>
+        </header>
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <!-- search form -->
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+                        <li class="active">
+                            <a href="index.html">
+                                <i class="fa fa-dashboard"></i> <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="modules/news.html">
+                                <i class="fa fa-th"></i> <span>News</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>Guide Map</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="modules/vital.html"><i class="fa fa-angle-double-right"></i> Vital Infra.</a></li>
+                            </ul>
+                        </li>
+                        
+                         <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-laptop"></i>
+                                <span>Essential Materials</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="modules/hotline.html"><i class="fa fa-angle-double-right"></i> DRRM Hotlines</a></li>
+                                <li><a href="modules/learning.html"><i class="fa fa-angle-double-right"></i> Citizen's Guide</a></li>
+                        </ul>
+                        </li>
+                        
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-laptop"></i>
+                                <span>Report</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="modules/general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="modules/danger.html"><i class="fa fa-angle-double-right"></i> Danger</a></li>
+                                <li><a href="modules/rescue.html"><i class="fa fa-angle-double-right"></i> Rescue!!!</a></li>
+                                <li><a href="modules/relief.html"><i class="fa fa-angle-double-right"></i> Relief Request</a></li>
+                                
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
 
-          <h1 id="section2">Section 2</h1>
-         <div class="panel panel-default">
-          <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Crisis Map</h4></div>
-   			<div class="panel-body" style="height:400px;">
-              <div class="list-group">
-                  Announcement Module Here
-              </div>
-            </div>
-        </div>
-          
-    
-          <h1 id="section3">Report</h1>           
-            <div class="well"> 
-                     <form class="form-horizontal" role="form">
-                      <h4>Report</h4>
-                       <div class="form-group" style="padding:14px;">
-                        <textarea class="form-control" placeholder="Update your status"></textarea>
-                      </div>
-                      
-                       <button class="btn btn-success pull-right" type="button">Post</button><ul class="list-inline"><li><a href="#"><i class="glyphicon glyphicon-align-left"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-center"></i></a></li><li><a href="#"><i class="glyphicon glyphicon-align-right"></i></a></li></ul>
-                    </form>
-                </div>
-  
-          </div><!--/.row-->
-  </div><!--/.container-->
-</div><!--/.page-container-->
-</div>
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Home
+                        <small>Attention!!!</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li class="active">Attention!!!</li>
+                    </ol>
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+					
+                    <div align="center" style="width: 280px; background-color:#FFFFFF;"><iframe style="overflow:hidden;border:none" allowtransparency="true" width="280" height="205" src="http://www.weather-forecast.com/locations/Manila/forecasts/latest/threedayfree" scrolling="no" frameborder="0" marginwidth="0" marginheight="0"></iframe></div>
+					
+					<div align="center">
+						<button><a href="modules/hotline.html">Emergency Hotlines</a></button>
+					</div>
+
+					
+                    <!-- ./col -->
+                    <!-- Small boxes (Stat box) -->
+                    <!-- top row -->
+                    <!-- /.row -->
+
+                    <!-- Main row -->
+                    <div class="row">
+                        <!-- Left col -->
+                        <section class="col-lg-6 connectedSortable"> 
+                            <!-- Box (with bar chart) -->     
+                            
+                            <!-- Custom tabs (Charts with tabs)-->
+                                                                            
+                            <!-- Calendar -->
+                            <!--The calendar -->
+                                    
+                            <!-- /.box -->
+
+                            <!-- Chat box -->
+                            
+                            <!-- TO DO List -->
+                           </section><!-- right col -->
+                    </div><!-- /.row (main row) -->
+
+                </section><!-- /.content -->
+            </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+
+        <!-- add new calendar event modal -->
 
 
+        <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- jQuery UI 1.10.3 -->
+        <script src="js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- Morris.js charts -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="js/plugins/morris/morris.min.js" type="text/javascript"></script>
+        <!-- Sparkline -->
+        <script src="js/plugins/sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+        <!-- jvectormap -->
+        <script src="js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" type="text/javascript"></script>
+        <script src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" type="text/javascript"></script>
+        <!-- fullCalendar -->
+        <script src="js/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="js/plugins/jqueryKnob/jquery.knob.js" type="text/javascript"></script>
+        <!-- daterangepicker -->
+        <script src="js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+        <!-- Bootstrap WYSIHTML5 -->
+        <script src="js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
+        <!-- iCheck -->
+        <script src="js/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
 
+        <!-- AdminLTE App -->
+        <script src="js/AdminLTE/app.js" type="text/javascript"></script>
         
-        <script type='text/javascript' src="jqmin.js"></script>
-
-
-        <script type='text/javascript' src="bootmin.js"></script>
-
-
-
-
-
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="js/AdminLTE/dashboard.js" type="text/javascript"></script>     
         
-        <!-- JavaScript jQuery code from Bootply.com editor -->
-        
-        <script type='text/javascript'>
-        
-        $(document).ready(function() {
-        
-              $('[data-toggle=offcanvas]').click(function() {
-    $('.row-offcanvas').toggleClass('active');
-  });
-  
-  $('.btn-toggle').click(function() {
-    $(this).find('.btn').toggleClass('active').toggleClass('btn-default').toggleClass('btn-primary');
-  });
-
-        
-        });
-        
-        </script>	
+        <!-- AdminLTE for demo purposes -->
+        <script src="js/AdminLTE/demo.js" type="text/javascript"></script>    
 </body>
 </html>
